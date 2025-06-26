@@ -1,0 +1,203 @@
+body {
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f7f7f7;
+  color: #ffffff;
+}
+.sticky-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1050;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.expo-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: #fceae3;
+  padding: 1rem 2rem;
+}
+
+.logo-section {
+  display: flex;
+  align-items: center;
+  min-width: 120px;
+}
+
+.info-row {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  text-align: center;
+}
+.info-row {
+  font-size: 1.15rem;
+  font-weight: 500;
+}
+
+.info-row .fw-bold {
+  font-size: 1.25rem;
+}
+
+.info-row .small,
+.info-row .text-muted {
+  font-size: 1.1rem;
+}
+.right-header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.3rem;
+  min-width: 120px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 0.8rem;
+  margin-bottom: 0.2rem;
+}
+
+.dropdown-menu img {
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+.right-header {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+.right-header .d-flex.gap-3 a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.1rem; /* ចន្លោះ icon និងអក្សរ */
+  margin-top: -6px; /* ខិតឡើងខាងលើបន្តិច */
+  transition: color 0.2s, transform 0.2s;
+}
+
+.right-header .d-flex.gap-3 a:hover {
+  color: #ff6b6b !important;
+  transform: translateY(-2px) scale(1.08);
+}
+
+.right-header .d-flex.gap-3 small {
+  font-size: 1rem;
+  margin-top: 2px; /* ចុះក្រោម icon បន្តិច */
+  transition: color 0.2s;
+}
+
+.main-navbar {
+  font-family: "Times New Roman", Times, serif;
+  font-weight: bolder;
+  text-transform: capitalize;
+  background-color: #e17575;
+  padding: 1rem 0;
+}
+
+.navbar-nav .nav-link {
+  font-weight: bold;
+  color: black;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #ffb300;
+}
+
+@media (max-width: 768px) {
+  .expo-header,
+  .right-header,
+  .logo-section {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+.food-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 2rem;
+}
+
+.food-container {
+  padding-top: 50px;
+}
+.food-item {
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  margin: auto;
+  padding: auto;
+}
+
+.food-item:hover {
+  transform: translateY(-5px);
+}
+
+.food-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.food-item h3 {
+  padding: 1rem;
+  margin: 0;
+  color: #ff6b6b;
+  text-align: center;
+}
+
+.food-item p {
+  padding: 0 1rem 1rem;
+  margin: 0;
+  color: #666;
+}
+
+@media (max-width: 768px) {
+  .food-container {
+    grid-template-columns: 1fr;
+  }
+}
+button {
+  background-color: #ff6b6b;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border: none;
+  gap: 2rem;
+  margin: 20px;
+}
+button:hover {
+  background-color: #ff6b6b;
+}
+
+.link {
+  color: white;
+  text-decoration: none;
+}
+.price {
+  text-align: center;
+  color: red;
+}
+.ee {
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 20px;
+  color: #ff6b6b;
+}
+.text {
+  color: white;
+  text-decoration: none;
+}

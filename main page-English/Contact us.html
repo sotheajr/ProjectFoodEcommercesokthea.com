@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact us</title>
+    <link
+      rel="icon"
+      href="../image/banner/BgSub_restaurant-logo-design-(1)-template-b9bd726f6bee3380567f1c9b63a8c99b_screen.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="header-container"></div>
+    <script>
+      fetch("../loadHeader_enmain.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("header-container").innerHTML = data;
+        })
+        .catch((error) => console.error("Error loading header:", error));
+    </script>
+
+    <h3 style="color: #000000">
+      Contact us
+      <hr size="2" width="400px" color="#000000" align="left" />
+    </h3>
+
+    <div style="color: #000000">
+      If you have any questions or comments about our products or services,feel
+      free to contact us using the addresses, phone numbers or form below.
+    </div>
+
+    <h3 style="color: #000000">
+      Gold Restaurant
+      <hr size="2" width="400px" color="#000000" align="left" />
+    </h3>
+    <br />
+    <div style="color: #000000">
+      <b> Address: </b>
+      No,28 Street Preah Sihanouk Blvd (274) Moha Montrei Pagoda , Sangkat
+      Olympic, Khan Boeung Keng Kang, Phnom Penh Cambodia
+    </div>
+    <div style="color: #000000">
+      <b> Tel&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: </b>
+      096 617 3444,078 953 806,097 922 6386
+    </div>
+    <div style="color: #000000">
+      <b> Email &nbsp;&nbsp;: </b>
+      goldrestaurant@gmail.com
+    </div>
+
+    <h3 style="color: #000000">
+      Social Media
+      <hr size="2" width="400px" color="##000000" align="left" />
+    </h3>
+
+    <div style="color: #000000">
+      <b> Facebook&nbsp;&nbsp;: </b>
+      Gold Restaurant
+      <br />
+      <b> Tik Tok&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: </b>
+      Gold Restaurant
+      <br />
+      <b> Instagram&nbsp;: </b>
+      Gold Restaurant
+      <br />
+      <b> Telegram&nbsp;&nbsp;: </b>
+      Gold Restaurant
+    </div>
+    <div id="footer-container"></div>
+
+    <script>
+      fetch("../Footer_enmain.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("footer-container").innerHTML = data;
+        })
+        .catch((error) => console.error("Error loading footer:", error));
+    </script>
+  </body>
+</html>

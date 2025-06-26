@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Fixed Header Example</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Angkor&family=Moul&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        padding-top: 210px;
+      }
+
+      .sticky-wrapper {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1050;
+        background-color: white;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      .expo-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        background-color: #fceae3;
+        padding: 1rem 2rem;
+      }
+
+      .logo-section {
+        display: flex;
+        align-items: center;
+        min-width: 120px;
+      }
+
+      .info-row {
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: center;
+        justify-content: center;
+        gap: 1.5rem;
+        text-align: center;
+      }
+      .info-row {
+        font-size: 1.15rem;
+        font-weight: 500;
+      }
+
+      .info-row .fw-bold {
+        font-size: 1.25rem;
+      }
+
+      .info-row .small,
+      .info-row .text-muted {
+        font-size: 1.1rem;
+      }
+      .right-header {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 0.3rem;
+        min-width: 120px;
+      }
+
+      .social-icons {
+        display: flex;
+        gap: 0.8rem;
+        margin-bottom: 0.2rem;
+      }
+
+      .dropdown-menu img {
+        margin-right: 8px;
+        vertical-align: middle;
+      }
+
+      .right-header {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+        flex-wrap: wrap;
+      }
+      .right-header .d-flex.gap-3 a {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.1rem; /* ចន្លោះ icon និងអក្សរ */
+        margin-top: -6px; /* ខិតឡើងខាងលើបន្តិច */
+        transition: color 0.2s, transform 0.2s;
+      }
+
+      .right-header .d-flex.gap-3 a:hover {
+        color: #ff6b6b !important;
+        transform: translateY(-2px) scale(1.08);
+      }
+
+      .right-header .d-flex.gap-3 small {
+        font-size: 1rem;
+        margin-top: 2px; /* ចុះក្រោម icon បន្តិច */
+        transition: color 0.2s;
+      }
+
+      .main-navbar {
+        font-family: "Moul", serif;
+        font-weight: bolder;
+        text-transform: capitalize;
+        background-color: #e17575;
+        padding: 1rem 0;
+      }
+
+      .navbar-nav .nav-link {
+        font-weight: bold;
+        color: black;
+      }
+
+      .navbar-nav .nav-link:hover {
+        color: #ffb300;
+      }
+
+      @media (max-width: 768px) {
+        .expo-header,
+        .right-header,
+        .logo-section {
+          flex-direction: column;
+          text-align: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!DOCTYPE html>
+    <html lang="en">
+      <head>
+        <meta charset="UTF-8" />
+        <title>Expo Website</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- Bootstrap CSS + FontAwesome -->
+        <link
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+        />
+        <link
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+          rel="stylesheet"
+        />
+        <link rel="stylesheet" href="style.css" />
+      </head>
+      <body>
+        <div class="fixed-top shadow bg-white">
+          <header
+            class="expo-header px-3 py-2 d-flex justify-content-between align-items-center flex-wrap"
+          >
+            <!-- Logo ខាងឆ្វេង -->
+            <div class="logo-section d-flex align-items-center">
+              <img
+                src="../image/banner/BgSub_restaurant-logo-design-(1)-template-b9bd726f6bee3380567f1c9b63a8c99b_screen.png"
+                alt="Logo"
+                class="expo-logo"
+                width="100"
+                height="100"
+              />
+            </div>
+            <!-- Info នៅកណ្ដាល -->
+            <div class="info-row text-center flex-grow-1">
+              <div class="fw-bold">ចន្ទ ​ដល់ អាទិត្យ</div>
+              <div class="text-muted small">៧:00ព្រឹក - 11:00 ថ្ងៃត្រង់</div>
+              <div class="text-muted small">📍 ហាងអាហារខ្មែរនៅកោះពេជ្រ</div>
+            </div>
+            <!-- Social + Login/Signup ខាងស្តាំ -->
+            <div class="right-header d-flex flex-column align-items-end">
+              <div class="social-icons d-flex gap-2 mb-1">
+                <a href="#"><i class="fab fa-facebook text-primary"></i></a>
+                <a href="#"><i class="fab fa-instagram text-danger"></i></a>
+                <a href="#"><i class="fab fa-youtube text-danger"></i></a>
+                <a href="#"><i class="fab fa-telegram text-info"></i></a>
+                <a href="#"><i class="fab fa-tiktok text-dark"></i></a>
+              </div>
+              <div class="d-flex gap-3">
+                <a href="#" class="text-decoration-none text-dark text-center">
+                  <i class="fa-solid fa-user fa-lg d-block"></i>
+                  <small>បំពេញបែបបទ</small>
+                </a>
+                <a href="#" class="text-decoration-none text-dark text-center">
+                  <i class="fa-solid fa-book-open fa-lg d-block"></i>
+                  <small class="small">ចុះឈ្មោះជាសមាជិក</small>
+                </a>
+              </div>
+            </div>
+          </header>
+
+          <nav
+            class="main-navbar navbar navbar-expand-lg bg-danger navbar-dark"
+          >
+            <div class="container justify-content-center">
+              <ul class="navbar-nav d-flex gap-3">
+                <li class="nav-item">
+                  <a class="nav-link" href="/main page-Khmer/Home_Page_Kh.html"
+                    >ទំព័រដើម</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/main page-Khmer/fish_type_kh.html"
+                    >ប្រភេទត្រី</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/main page-Khmer/soup_type_kh.html"
+                    >ប្រភេទស៊ុប</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link"
+                    href="/main page-Khmer/grill_type_kh.html "
+                    >ប្រភេទអាំង</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/main page-Khmer/fried_type_kh.html"
+                    >ប្រភេទឆា</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link"
+                    href="/main page-Khmer/dessert_type_kh.html"
+                    >ប្រភេទបង្អែម</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link"
+                    href="/main page-Khmer/Contact us_Kh.html "
+                    >ទំនាក់ទំនង</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/main page-Khmer/About​ us_Kh.html "
+                    >អំពីពួកយើង</a
+                  >
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="#"
+                    data-bs-toggle="dropdown"
+                  >
+                    <img
+                      src="https://cdn.jsdelivr.net/gh/hjnilsson/country-flags/svg/gb.svg"
+                      style="width: 20px"
+                    />
+                    English
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a class="dropdown-item" href="../index.html"
+                        ><img
+                          src="https://cdn.jsdelivr.net/gh/hjnilsson/country-flags/svg/gb.svg"
+                          width="20"
+                        />
+                        English</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="dropdown-item"
+                        href="../main page-Khmer/Home_Page_Kh.html"
+                        ><img
+                          src="https://cdn.jsdelivr.net/gh/hjnilsson/country-flags/svg/kh.svg"
+                          width="20"
+                        />
+                        Khmer</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+      </body>
+    </html>
+  </body>
+</html>

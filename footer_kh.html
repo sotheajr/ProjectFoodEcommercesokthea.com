@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Angkor&family=Moul&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+
+.bg-pink {
+  background-color: #ef9b9b;
+}
+.footer-hover {
+  font-family: "Moul", serif;
+  font-size: 15px;
+  transition: color 0.3s ease;
+  cursor: pointer;
+}
+.footer-hover:hover {
+  color: #ffd700;
+}
+#subscribeCard {
+  animation: fadeIn 0.4s ease;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
+     </style>
+    <body>
+      
+
+<footer class="footer bg-pink text-white py-4 position-relative">
+  <div class="container">
+    <!-- TOP -->
+    <div class="row footer-top mb-4">
+      <div class="col-md-4 footer-help">
+        <h5 class="footer-hover">ត្រូវការជំនួយ?</h5>
+        <ul class="list-unstyled small">
+          <li class="footer-hover">• ស្ថានភាពបញ្ជាទិញ</li>
+          <li class="footer-hover">• ការដឹកជញ្ជូន និងការទៅយក</li>
+          <li class="footer-hover">• ផ្លាស់ប្តូរ និងត្រឡប់ទំនិញ</li>
+        </ul>
+      </div>
+      <div class="col-md-4 footer-contact">
+        <h5 class="footer-hover">ទាក់ទងផ្នែកបម្រើអតិថិជន</h5>
+        <p class="footer-hover"><strong>020-224 2424</strong></p>
+        <p class="small footer-hover">ថ្ងៃធ្វើការ 08:30-21:00<br>ថ្ងៃសៅរ៍ 10:00-18:00</p>
+      </div>
+      <div class="col-md-4 footer-find-store">
+        <h5 class="footer-hover">ស្វែងទីកន្លែង</h5>
+        <div class="input-group input-group-sm">
+          <input type="text" class="form-control" placeholder="បញ្ចូលលេខប្រៃសណីយ៍ ឬទីកន្លែង">
+          <button class="btn btn-light">ស្វែងរក</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- MIDDLE -->
+    <div class="row footer-middle mb-4">
+      <div class="col-md-4 social">
+        <h5 class="footer-hover">តាមដាន  Diamond </h5>
+        <div class="d-flex gap-2">
+          <a href="#"><img src="../image/banner/facebook.png" alt="Facebook" width="20"></a>
+          <a href="#"><img src="../image/banner/images.jpg" alt="Instagram" width="20"></a>
+          <a href="#"><img src="../image/banner/youtube.png" alt="YouTube" width="20"></a>
+          <a href="#"><img src="../image/banner/tiktok.png" alt="tiktok" width="20"></a>
+          <a href="#"><img src="../image/banner/telegram.png" alt="telegram" width="20"></a>
+      </div>
+      </div>
+      <div class="col-md-4 payments">
+        <h5 class="footer-hover">វិធីបង់ប្រាក់ងាយស្រួល</h5>
+        <img src="../image/banner/unionpay.png" alt="unionpay" width="40" height="25">
+        <img src="../image/banner/visa.png" alt="visa" width="40">
+        <img src="../image/banner/payway.png" alt="payway" width="50">
+        <img src="../image/banner/paypal.png" alt="paypal" width="50" height="25">
+      </div>
+      
+      <div class="col-md-4 newsletter">
+        <h5 class="footer-hover">អានព្រឹត្តិបត្រព័ត៌មានរបស់យើង</h5>
+        <div class="input-group input-group-sm">
+          <input id="emailInput" type="email" class="form-control" placeholder="អ៊ីមែលរបស់អ្នក">
+          <button class="btn btn-light" onclick="showCard()">ចុះឈ្មោះ</button>
+        </div>
+      </div>
+    </div>
+    
+
+    <!-- CARD SHOW ON SUBSCRIBE -->
+    <div id="subscribeCard" class="card position-absolute start-50 translate-middle-x d-none mt-3" style="width: 20rem; top: 90%; z-index: 999;">
+      <div class="card-body text-center">
+        <h6 class="card-title">សូមអរគុណ!</h6>
+        <p class="card-text">អ្នកបានជាវព្រឹត្តិបត្រដោយជោគជ័យ។</p>
+        <button class="btn btn-outline-primary btn-sm" onclick="hideCard()">បិទ</button>
+      </div>
+    </div>
+
+    <!-- LINKS -->
+    <div class="row footer-links mt-4">
+      <div class="col-md-3">
+        <h6 class="footer-hover">ប្រភេទទំនិញពេញនិយម</h6>
+        <ul class="list-unstyled small">
+          <li class="footer-hover">សម្លៀកបំពាក់ស្ត្រី</li>
+          <li class="footer-hover">សម្លៀកបំពាក់ក្មេងស្រី</li>
+          <li class="footer-hover">សម្លៀកបំពាក់ក្មេងប្រុស</li>
+          <li class="footer-hover">សម្លៀកបំពាក់ទារក</li>
+          <li class="footer-hover">គ្រឿងសង្ហារឹម និងគេង</li>
+          <li class="footer-hover">ស្រា</li>
+          <li class="footer-hover">នំ</li>
+        </ul>
+      </div>
+      <div class="col-md-3">
+        <h6 class="footer-hover">សម្រាប់អ្នកគាំទ្រ HEMA</h6>
+        <ul class="list-unstyled small">
+          <li class="footer-hover">ប័ណ្ណសមាជិក 'HEMA'</li>
+          <li class="footer-hover">អានព្រឹត្តិការណ៍</li>
+          <li class="footer-hover">HEMA លើបណ្តាញសង្គម</li>
+          <li class="footer-hover">គំនិតបែបច្នៃប្រឌិត</li>
+          <li class="footer-hover">ព័ត៌មានថ្មីៗ</li>
+        </ul>
+      </div>
+      <div class="col-md-3">
+        <h6 class="footer-hover">អំពី HEMA</h6>
+        <ul class="list-unstyled small">
+          <li class="footer-hover">អំពីក្រុមហ៊ុន</li>
+          <li class="footer-hover">ជ្រើសរើសបុគ្គលិក</li>
+          <li class="footer-hover">HEMA បែបបរិស្ថាន</li>
+          <li class="footer-hover">មូលនិធិ HEMA</li>
+          <li class="footer-hover">HEMA សម្រាប់អាជីវកម្ម</li>
+          <li class="footer-hover">សេវាអតិថិជន</li>
+          <li class="footer-hover">លក្ខខណ្ឌផ្សព្វផ្សាយ</li>
+          <li class="footer-hover">ពិនិត្យតុល្យភាពកាតអំណោយ</li>
+        </ul>
+      </div>
+      <div class="col-md-3">
+        <h6 class="footer-hover">អន្តរជាតិ</h6>
+        <ul class="list-unstyled small">
+          <li class="footer-hover">HEMA បែលហ្សិក</li>
+          <li class="footer-hover">HEMA អាឡឺម៉ង់</li>
+          <li class="footer-hover">HEMA អង់គ្លេស</li>
+          <li class="footer-hover">HEMA បារាំង</li>
+          <li class="footer-hover">HEMA អូទ្រីស</li>
+          <li class="footer-hover">HEMA អេស្ប៉ាញ</li>
+          <li class="footer-hover">HEMA អេមីរ៉ាតអារ៉ាប់រួម</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- BOTTOM -->
+    <div class="footer-bottom d-flex justify-content-between align-items-center mt-4 pt-3 border-top border-white">
+      <img src="../image/banner/BgSub_restaurant-logo-design-(1)-template-b9bd726f6bee3380567f1c9b63a8c99b_screen.png" alt="HEMA" style="height: 40px;">
+      <div class="bottom-links d-flex gap-3 small">
+        <a href="#" class="footer-hover text-white">គោលការណ៍ឯកជនភាព</a>
+        <a href="#" class="footer-hover text-white">ការបដិសេធ</a>
+        <a href="#" class="footer-hover text-white">រក្សាសិទ្ធិ</a>
+        <a href="#" class="footer-hover text-white">លក្ខខណ្ឌទូទៅ</a>
+        <a href="#" class="footer-hover text-white">ខូគី</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ទំនាក់ទំនង</title>
+    <link rel="stylesheet" href="Style.css" />
+  </head>
+  <body>
+    <div id="header-container"></div>
+    <script>
+      fetch("../loadHeader_khmain.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("header-container").innerHTML = data;
+        })
+        .catch((error) => console.error("Error loading header:", error));
+    </script>
+
+    <h3 style="color: #000000" class="text">
+      ទំនាក់ទំនង
+      <hr size="2" width="400px" color="#000000" align="left" />
+    </h3>
+
+    <div style="color: #000000" class="text">
+      ប្រសិនបើអ្នកមានសំណួរ ឬមតិយោបល់អំពីផលិតផល
+      ឬសេវាកម្មរបស់យើង,សូមទំនាក់ទំនងមកយើងខ្ញុំតាមរយៈអាសយដ្ឋាន លេខទូរស័ព្ទ
+      ឬទម្រង់ខាងក្រោម។
+    </div>
+
+    <h3 style="color: #000000" class="text">
+      ភោជនីដ្ឋានមាស
+      <hr size="2" width="400px" color="#000000" align="left" />
+    </h3>
+    <br />
+    <div style="color: #000000" class="text">
+      <b> អាស័យដ្ឋាន: </b>
+      ផ្ទះលេខ​ ២៨ ផ្លូវព្រះសីហនុ មហាវិថី 274 វត្តមហាមន្ត្រី សង្កាត់អូឡាំពិក
+      ខណ្ឌបឹងកេងកង រាជធានីភ្នំពេញ ប្រទេសកម្ពុជា
+    </div>
+
+    <div style="color: #000000" class="text">
+      <b> លេខទូរស័ព្ទ: </b>
+      096 617 3444,078 953 806,097 922 6386
+    </div>
+
+    <div style="color: #000000" class="text">
+      <b> អ៊ីមែល &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: </b>
+      goldrestaurant@gmail.com
+    </div>
+
+    <h3 style="color: #000000" class="text">
+      បណ្ដាញសង្គម
+      <hr size="2" width="400px" color="#000000" align="left" />
+    </h3>
+
+    <div style="color: #000000" class="text">
+      <b> ហ្វេសប៊ុក&nbsp;&nbsp;: </b>
+      ភោជនីយដ្ឋានមាស
+      <br />
+      <b> តីកតុក&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: </b>
+      ភោជនីយដ្ឋានមាស
+      <br />
+      <b> អ៊ីនស្ដាក្រាម&nbsp;: </b>
+      ភោជនីយដ្ឋានមាស
+      <br />
+      <b> តេឡេក្រាម&nbsp;&nbsp;: </b>
+      ភោជនីយដ្ឋានមាស
+    </div>
+
+    <div id="footer-container"></div>
+
+    <script>
+      fetch("../Footer_khmain.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("footer-container").innerHTML = data;
+        })
+        .catch((error) => console.error("Error loading footer:", error));
+    </script>
+  </body>
+</html>

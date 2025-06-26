@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>អំពីពួកយើង</title>
+    <link rel="stylesheet" href="Style.css" />
+  </head>
+  <body>
+    <div id="header-container"></div>
+    <script>
+      fetch("../loadHeader_khmain.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("header-container").innerHTML = data;
+        })
+        .catch((error) => console.error("Error loading header:", error));
+    </script>
+
+    <h3 style="color: #000000" class="text">
+      អំពីពួកយើង
+      <hr size="2" width="400px" color="#000000" align="left" />
+    </h3>
+
+    <div style="color: #000000" class="text">
+      ឆ្លៀត​ឱកាសក្នុងការ​លក់​អាហារដ៏មាន​រសជាតិឆ្ងុយឆ្ងាញ់របស់​​អាហារដ្ឋានមាស​​។​
+      លៀង​ សាឡាង បានបង្កើតភោជនីយដ្ឋាន Gold Restaurant នៅក្នុងឆ្នាំ ២០២៣។
+      ដោយបានបង្កើតអាហារដ្ឋានជាច្រើនសាខានៅភ្នំពេញរួចហើយ
+      ពួកយើងបានចម្អិនអាហារដ៏មាន​រសជាតិឆ្ងុយឆ្ងាញ់ដល់ប្រជាជនកម្ពុជា។យ៉ាង​ណា​ក៏​ដោយ
+      ពួក​យើង​មាន​ទំនុក​ចិត្ត​ថា​វា​នឹង​មាន​ប្រសិទ្ធភាព
+      មានរសជាតិឈ្ងុយឆ្ងាញ់ល្បីល្បាញនៅថ្ងៃខាងមុខ។
+    </div>
+
+    <h3 style="color: #000000" class="text">
+      ចក្ខុវិស័យ
+      <hr size="2" width="400px" color="#000000" align="left" />
+    </h3>
+
+    <div style="color: #000000" class="text">
+      ១ គោលដៅរបស់ពួកយើងគឺចម្អិនអាហារអោយមានគុណភាព
+      <br />
+      ២ ផ្ដល់ឪកាសការងារដល់សិស្សនិងនិស្សិត
+      <br />
+      ៣ ដោយមើលឃើញអំពីតម្រូវការរបស់សាធារណៈជនច្រើន
+    </div>
+    <div id="footer-container"></div>
+
+    <script>
+      fetch("../Footer_khmain.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("footer-container").innerHTML = data;
+        })
+        .catch((error) => console.error("Error loading footer:", error));
+    </script>
+  </body>
+</html>
