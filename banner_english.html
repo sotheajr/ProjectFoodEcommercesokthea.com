@@ -128,13 +128,23 @@
         <h1 id="typing-text"></h1>
         <p>Enjoy Fish Amok, Samlor Machu & More</p>
         <div class="button-group">
-          <a href="#order" class="btn btn-light btn-custom"
+          <a
+            href="#order"
+            class="btn btn-light btn-custom"
+            data-bs-toggle="modal"
+            data-bs-target="#orderNowModal"
             ><i class="bi bi-bag-fill me-2"></i>Order Now</a
           >
-          <a href="#menu" class="btn btn-outline-light btn-custom"
+          <a
+            href="/main page-English/About us.html "
+            class="btn btn-outline-light btn-custom"
             ><i class="bi bi-eye me-2"></i>View More</a
           >
-          <a href="#location" class="btn btn-outline-light btn-custom"
+          <a
+            href="#location"
+            class="btn btn-outline-light btn-custom"
+            data-bs-toggle="modal"
+            data-bs-target="#mapModal"
             ><i class="bi bi-geo-alt-fill me-2"></i>Locations</a
           >
           <a href="tel:+85512345678" class="btn btn-light btn-custom"
@@ -143,6 +153,137 @@
         </div>
       </div>
     </div>
+
+    <!-- Order Now Modal -->
+    <div
+      class="modal fade"
+      id="orderNowModal"
+      tabindex="-1"
+      aria-labelledby="orderNowModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content shadow">
+          <div class="modal-header bg-warning text-white">
+            <h5 class="modal-title fw-bold" id="orderNowModalLabel">
+              🛒 Place Your Order
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form id="orderNowForm">
+              <div class="mb-3">
+                <label for="orderName" class="form-label">Full Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="orderName"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="orderPhone" class="form-label">Phone Number</label>
+                <input
+                  type="tel"
+                  class="form-control"
+                  id="orderPhone"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="orderItems" class="form-label"
+                  >What would you like to order?</label
+                >
+                <textarea
+                  class="form-control"
+                  id="orderItems"
+                  rows="3"
+                  placeholder="E.g., 2x Fried Rice, 1x BBQ Pork..."
+                  required
+                ></textarea>
+              </div>
+              <div class="mb-3">
+                <label for="orderAddress" class="form-label"
+                  >Delivery Address</label
+                >
+                <textarea
+                  class="form-control"
+                  id="orderAddress"
+                  rows="2"
+                  required
+                ></textarea>
+              </div>
+              <div class="mb-3">
+                <label for="orderTime" class="form-label"
+                  >Preferred Delivery Time</label
+                >
+                <input type="time" class="form-control" id="orderTime" />
+              </div>
+              <div class="d-grid">
+                <button type="submit" class="btn btn-warning fw-bold">
+                  Submit Order
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="modal fade"
+      id="mapModal"
+      tabindex="-1"
+      aria-labelledby="mapModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content shadow">
+          <div class="modal-header bg-warning text-white">
+            <h5 class="modal-title" id="mapModalLabel">
+              Our Location - Koh Pich
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body p-0">
+            <div class="ratio ratio-16x9">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.3841872684426!2d104.9301873153349!3d11.550899191810118!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31095125ea0ff4a7%3A0x4c7380c3453e5794!2sKoh%20Pich%20(Diamond%20Island)!5e0!3m2!1sen!2skh!4v1687935030500!5m2!1sen!2skh"
+                width="100%"
+                height="450"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+              >
+              </iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      document
+        .getElementById("orderNowForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+          alert("✅ Your order has been submitted successfully!");
+          const modal = bootstrap.Modal.getInstance(
+            document.getElementById("orderNowModal")
+          );
+          modal.hide();
+          this.reset();
+        });
+    </script>
 
     <!-- Slide Switching JS -->
 

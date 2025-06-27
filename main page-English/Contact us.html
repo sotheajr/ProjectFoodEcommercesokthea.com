@@ -4,11 +4,37 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact us</title>
+    <!-- Bootstrap CSS + FontAwesome -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      rel="stylesheet"
+    />
     <link
       rel="icon"
       href="../image/banner/BgSub_restaurant-logo-design-(1)-template-b9bd726f6bee3380567f1c9b63a8c99b_screen.png"
       type="image/x-icon"
     />
+    <style>
+      #contact {
+        padding-top: 140px;
+      }
+      #contact i {
+        transition: transform 0.3s ease;
+      }
+      #contact i:hover {
+        transform: scale(1.3);
+        color: #ffc107;
+      }
+      #contact form .form-control:focus {
+        border-color: #ffc107;
+        box-shadow: 0 0 0 0.2rem rgba(255, 193, 7, 0.25);
+      }
+    </style>
+
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
@@ -22,55 +48,126 @@
         .catch((error) => console.error("Error loading header:", error));
     </script>
 
-    <h3 style="color: #000000">
-      Contact us
-      <hr size="2" width="400px" color="#000000" align="left" />
-    </h3>
+    <section class="container my-5" id="contact">
+      <div class="text-center mb-4">
+        <h2 class="fw-bold text-dark">📞 Contact Us</h2>
+        <hr
+          class="border border-dark mx-auto opacity-100"
+          style="width: 150px"
+        />
+        <p class="text-secondary">
+          Please contact the Gold Restaurant team below.
+        </p>
+      </div>
 
-    <div style="color: #000000">
-      If you have any questions or comments about our products or services,feel
-      free to contact us using the addresses, phone numbers or form below.
-    </div>
+      <div class="row g-5 align-items-center">
+        <!-- Company Info -->
+        <div class="col-lg-6">
+          <h5 class="fw-bold">🏢 Company Info</h5>
+          <p class="mb-2">
+            <strong>Address:</strong><br />
+            Koh Pich (Diamond Island), Phnom Penh, Cambodia
+          </p>
+          <p class="mb-2">
+            <strong>Phone:</strong><br />
+            096 617 3444, 078 953 806, 097 922 6386
+          </p>
+          <p class="mb-2">
+            <strong>Email:</strong><br />
+            goldrestaurant@gmail.com
+          </p>
 
-    <h3 style="color: #000000">
-      Gold Restaurant
-      <hr size="2" width="400px" color="#000000" align="left" />
-    </h3>
-    <br />
-    <div style="color: #000000">
-      <b> Address: </b>
-      No,28 Street Preah Sihanouk Blvd (274) Moha Montrei Pagoda , Sangkat
-      Olympic, Khan Boeung Keng Kang, Phnom Penh Cambodia
-    </div>
-    <div style="color: #000000">
-      <b> Tel&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: </b>
-      096 617 3444,078 953 806,097 922 6386
-    </div>
-    <div style="color: #000000">
-      <b> Email &nbsp;&nbsp;: </b>
-      goldrestaurant@gmail.com
-    </div>
+          <h5 class="fw-bold mt-4">🤝 Our Partners</h5>
+          <div class="d-flex gap-3 flex-wrap">
+            <img src="../image/banner/NHAM24.png" width="100" alt="Nham24" />
+            <img
+              src="../image/banner/SMARTDEV.png"
+              width="100"
+              alt="SmartDev"
+            />
+            <img
+              src="../image/banner/mEta.png"
+              width="100"
+              alt="Meta Marketing"
+            />
+          </div>
 
-    <h3 style="color: #000000">
-      Social Media
-      <hr size="2" width="400px" color="##000000" align="left" />
-    </h3>
+          <!-- Social Media -->
+          <div class="mt-4">
+            <a
+              href="https://www.facebook.com"
+              target="_blank"
+              class="me-3 text-dark fs-5"
+            >
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://t.me" target="_blank" class="me-3 text-dark fs-5">
+              <i class="fab fa-telegram"></i>
+            </a>
+            <a
+              href="https://www.instagram.com"
+              target="_blank"
+              class="me-3 text-dark fs-5"
+            >
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a
+              href="https://www.tiktok.com"
+              target="_blank"
+              class="text-dark fs-5"
+            >
+              <i class="fab fa-tiktok"></i>
+            </a>
+          </div>
+        </div>
 
-    <div style="color: #000000">
-      <b> Facebook&nbsp;&nbsp;: </b>
-      Gold Restaurant
-      <br />
-      <b> Tik Tok&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: </b>
-      Gold Restaurant
-      <br />
-      <b> Instagram&nbsp;: </b>
-      Gold Restaurant
-      <br />
-      <b> Telegram&nbsp;&nbsp;: </b>
-      Gold Restaurant
-    </div>
+        <!-- Images -->
+        <div class="col-lg-6">
+          <img
+            src="../image/banner/team.jpg"
+            alt="Team at Work"
+            class="img-fluid rounded shadow mb-3"
+          />
+          <img
+            src="../image/banner/food display.jpg"
+            alt="Food Display"
+            class="img-fluid rounded shadow"
+          />
+        </div>
+      </div>
+
+      <!-- Partner Registration Form -->
+      <div class="row mt-5">
+        <div class="col-lg-8 mx-auto">
+          <h4 class="fw-bold text-dark text-center">Become a Partner</h4>
+          <form>
+            <div class="mb-3">
+              <label for="name" class="form-label">Company Name</label>
+              <input type="text" class="form-control" name="name" required />
+            </div>
+            <div class="mb-3">
+              <label for="contact" class="form-label">Phone Number</label>
+              <input type="text" class="form-control" name="contact" required />
+            </div>
+            <div class="mb-3">
+              <label for="message" class="form-label">Message</label>
+              <textarea
+                class="form-control"
+                name="message"
+                rows="3"
+                required
+              ></textarea>
+            </div>
+            <button type="submit" class="btn btn-warning">
+              Send to Telegram
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
     <div id="footer-container"></div>
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script>
       fetch("../Footer_enmain.html")
         .then((response) => response.text())
@@ -78,6 +175,33 @@
           document.getElementById("footer-container").innerHTML = data;
         })
         .catch((error) => console.error("Error loading footer:", error));
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const form = document.querySelector("#contact form");
+        if (form) {
+          form.addEventListener("submit", function (e) {
+            const name = form.querySelector("input[name='name']").value;
+            const contact = form.querySelector("input[name='contact']").value;
+            const message = form.querySelector(
+              "textarea[name='message']"
+            ).value;
+
+            const text =
+              `<b>📥 Partner Registration</b>%0A` +
+              `<b>Company:</b> ${name}%0A` +
+              `<b>Phone:</b> ${contact}%0A` +
+              `<b>Message:</b> ${message}`;
+
+            const botToken = "<YOUR_BOT_TOKEN>"; // Replace this
+            const chatId = "<YOUR_CHAT_ID>"; // Replace this
+            const telegramUrl = `https://api.telegram.org/bot${botToken}/sendMessage?chat_id=${chatId}&text=${text}&parse_mode=HTML`;
+
+            e.preventDefault();
+            window.open(telegramUrl, "_blank");
+          });
+        }
+      });
     </script>
   </body>
 </html>
