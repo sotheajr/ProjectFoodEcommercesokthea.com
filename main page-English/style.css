@@ -92,15 +92,36 @@ body {
 
 .right-header .d-flex.gap-3 small {
   font-size: 1rem;
-  margin-top: 2px; /* ចុះក្រោម icon បន្តិច */
+  margin-top: 2px;
   transition: color 0.2s;
 }
+.auth-links i {
+  font-size: 1.1rem;
+}
 
+.auth-links small {
+  font-size: 15px;
+}
+
+@media (max-width: 991.98px) {
+  .right-header {
+    flex-direction: row !important;
+    align-items: center !important;
+    gap: 1.2rem;
+  }
+  .social-icons,
+  .auth-links {
+    flex-direction: row !important;
+    align-items: center !important;
+    gap: 0.8rem;
+    margin-bottom: 0 !important;
+  }
+}
 .main-navbar {
   font-family: "Times New Roman", Times, serif;
   font-weight: bolder;
   text-transform: capitalize;
-  background-color: #e17575;
+  background-color: #ff6b6b;
   padding: 1rem 0;
 }
 
@@ -121,83 +142,26 @@ body {
     text-align: center;
   }
 }
-.food-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-  gap: 2rem;
-}
-
-.food-container {
-  padding-top: 50px;
-}
-.food-item {
-  background-color: white;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-  margin: auto;
-  padding: auto;
-}
-
-.food-item:hover {
-  transform: translateY(-5px);
-}
-
-.food-item img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-}
-
-.food-item h3 {
+.card-container {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  gap: 1rem;
   padding: 1rem;
-  margin: 0;
-  color: #ff6b6b;
-  text-align: center;
 }
 
-.food-item p {
-  padding: 0 1rem 1rem;
-  margin: 0;
-  color: #666;
+.card {
+  flex: 0 0 calc(50% - 0.5rem);
+  min-width: 200px;
 }
 
-@media (max-width: 768px) {
-  .food-container {
-    grid-template-columns: 1fr;
+@media (min-width: 1024px) {
+  .card-container {
+    flex-wrap: wrap;
+    overflow-x: unset;
   }
-}
-button {
-  background-color: #ff6b6b;
-  color: white;
-  padding: 0.5rem 1rem;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  border: none;
-  gap: 2rem;
-  margin: 20px;
-}
-button:hover {
-  background-color: #ff6b6b;
-}
 
-.link {
-  color: white;
-  text-decoration: none;
-}
-.price {
-  text-align: center;
-  color: red;
-}
-.ee {
-  text-align: center;
-  font-size: 30px;
-  margin-bottom: 20px;
-  color: #ff6b6b;
-}
-.text {
-  color: white;
-  text-decoration: none;
+  .card {
+    flex: 0 0 calc(20% - 1rem);
+  }
 }
