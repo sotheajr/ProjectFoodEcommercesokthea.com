@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About us</title>
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="icon"
+      href="../image/banner/BgSub_restaurant-logo-design-(1)-template-b9bd726f6bee3380567f1c9b63a8c99b_screen.png"
+      type="image/x-icon"
+    />
+    <style>
+      #about {
+        padding-top: 140px;
+      }
+      #about ul li {
+        margin-bottom: 0.5rem;
+      }
+      #about img {
+        max-height: 450px;
+        object-fit: cover;
+      }
+      /* Hover effect */
+      .card-title:hover,
+      .fw-bold:hover {
+        color: #ff5722 !important;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+
+      .card:hover {
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+        transform: translateY(-5px);
+        transition: 0.3s;
+      }
+
+      #chefs img:hover {
+        transform: scale(1.1);
+        transition: 0.3s ease;
+      }
+
+      /* Map sizing */
+      #location iframe {
+        height: 300px;
+      }
+
+      /* Gallery image */
+      .gallery-img {
+        height: 200px;
+        object-fit: cover;
+        border-radius: 12px;
+        transition: 0.3s;
+      }
+
+      .gallery-img:hover {
+        transform: scale(1.05);
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="header-container"></div>
+    <script>
+      fetch("../loadHeader_enmain.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("header-container").innerHTML = data;
+        })
+        .catch((error) => console.error("Error loading header:", error));
+    </script>
+
+    <section class="container my-5" id="about">
+      <div class="row align-items-center">
+        <!-- ✅ Image Column -->
+        <div class="col-lg-6 mb-4 mb-lg-0">
+          <img
+            src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092"
+            alt="About Gold Restaurant"
+            class="img-fluid rounded shadow"
+          />
+        </div>
+
+        <!-- ✅ Text Column -->
+        <div class="col-lg-6">
+          <h3 class="text-dark fw-bold">About Us</h3>
+          <hr class="border border-dark opacity-100" style="width: 150px" />
+          <p class="text-secondary">
+            Take the opportunity to sell the delicious food of
+            <strong>Gold Restaurant</strong>. Lieng Salang established Gold
+            Restaurant in 2023. Having already set up several restaurants in
+            Phnom Penh, we have cooked delicious food for the people of
+            Cambodia. However, we are confident that our flavor will become even
+            more famous in the days to come.
+          </p>
+
+          <h4 class="text-dark fw-bold mt-4">Our Vision</h4>
+          <hr class="border border-dark opacity-100" style="width: 120px" />
+          <ul class="text-secondary ps-3">
+            <li>Our goal is to cook quality food</li>
+            <li>Provide job opportunities for students</li>
+            <li>Seeing the needs of the public</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section: Our Menu -->
+    <section class="container my-5" id="menu">
+      <div class="text-center mb-4">
+        <h3 class="fw-bold text-dark">Our Menu</h3>
+        <hr
+          class="border border-dark opacity-100 mx-auto"
+          style="width: 150px"
+        />
+        <p class="text-secondary">Discover the taste of our signature dishes</p>
+        <a href="/index.html" class="btn btn-warning mt-2">See Full Menu</a>
+      </div>
+    </section>
+
+    <!-- Section: Call To Action -->
+    <section class="container text-center my-5" id="cta">
+      <div class="bg-warning text-white p-5 rounded shadow">
+        <h3 class="fw-bold mb-3">Ready to taste something amazing?</h3>
+        <p class="lead">Order now or book a table for your next visit!</p>
+        <a
+          href="#"
+          class="btn btn-light text-dark fw-bold px-4"
+          data-bs-toggle="modal"
+          data-bs-target="#orderNowModal"
+        >
+          Order Now
+        </a>
+
+        <a
+          href="#"
+          class="btn btn-outline-light fw-bold px-4"
+          data-bs-toggle="modal"
+          data-bs-target="#bookTableModal"
+        >
+          Book Table
+        </a>
+      </div>
+    </section>
+
+    <!-- Section: Gallery -->
+    <section class="container my-5" id="gallery">
+      <div class="text-center mb-4">
+        <h3 class="fw-bold text-dark">Gallery</h3>
+        <hr
+          class="border border-dark opacity-100 mx-auto"
+          style="width: 150px"
+        />
+        <p class="text-secondary">See the moments & dishes served with love</p>
+      </div>
+
+      <div class="row g-3">
+        <div class="col-md-4 col-6">
+          <img
+            src="/image/banner/foodmenu.jpg"
+            class="w-100 gallery-img"
+            alt="Food 1"
+          />
+        </div>
+        <div class="col-md-4 col-6">
+          <img
+            src="/image/banner/foodmenu2.jpg"
+            class="w-100 gallery-img"
+            alt="Food 2"
+          />
+        </div>
+        <div class="col-md-4 col-6">
+          <img
+            src="/image/banner/foodmenu3.avif"
+            class="w-100 gallery-img"
+            alt="Food 3"
+          />
+        </div>
+        <div class="col-md-4 col-6">
+          <img
+            src="/image/banner/chef.jpg"
+            class="w-100 gallery-img"
+            alt="Chef"
+          />
+        </div>
+        <div class="col-md-4 col-6">
+          <img
+            src="/image/banner/dinning.jpg"
+            class="w-100 gallery-img"
+            alt="Dining"
+          />
+        </div>
+        <div class="col-md-4 col-6">
+          <img
+            src="/image/banner/restaurant.webp"
+            class="w-100 gallery-img"
+            alt="Restaurant"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Section: Location -->
+    <section class="container my-5" id="location">
+      <div class="text-center mb-4">
+        <h3 class="fw-bold text-dark">Our Location</h3>
+        <hr
+          class="border border-dark opacity-100 mx-auto"
+          style="width: 150px"
+        />
+        <p class="text-secondary">
+          We are located in Koh Pich (Diamond Island), Phnom Penh
+        </p>
+      </div>
+
+      <div class="ratio ratio-16x9">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.3841872684426!2d104.9301873153349!3d11.550899191810118!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31095125ea0ff4a7%3A0x4c7380c3453e5794!2sKoh%20Pich%20(Diamond%20Island)!5e0!3m2!1sen!2skh!4v1687935030500!5m2!1sen!2skh"
+          width="100%"
+          height="700px"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+        ></iframe>
+      </div>
+    </section>
+    <!-- Book Table Modal -->
+    <div
+      class="modal fade"
+      id="bookTableModal"
+      tabindex="-1"
+      aria-labelledby="bookTableModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content shadow">
+          <div class="modal-header bg-warning text-white">
+            <h5 class="modal-title fw-bold" id="bookTableModalLabel">
+              📅 Book a Table
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form id="bookTableForm">
+              <div class="mb-3">
+                <label for="fullName" class="form-label">Full Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="fullName"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="phone" class="form-label">Phone Number</label>
+                <input type="tel" class="form-control" id="phone" required />
+              </div>
+              <div class="mb-3">
+                <label for="date" class="form-label">Date</label>
+                <input type="date" class="form-control" id="date" required />
+              </div>
+              <div class="mb-3">
+                <label for="time" class="form-label">Time</label>
+                <input type="time" class="form-control" id="time" required />
+              </div>
+              <div class="mb-3">
+                <label for="guests" class="form-label">Number of Guests</label>
+                <input
+                  type="number"
+                  class="form-control"
+                  id="guests"
+                  min="1"
+                  max="20"
+                  required
+                />
+              </div>
+              <div class="d-grid">
+                <button type="submit" class="btn btn-warning fw-bold">
+                  Submit
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Order Now Modal -->
+    <div
+      class="modal fade"
+      id="orderNowModal"
+      tabindex="-1"
+      aria-labelledby="orderNowModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content shadow">
+          <div class="modal-header bg-warning text-white">
+            <h5 class="modal-title fw-bold" id="orderNowModalLabel">
+              🛒 Place Your Order
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form id="orderNowForm">
+              <div class="mb-3">
+                <label for="orderName" class="form-label">Full Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="orderName"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="orderPhone" class="form-label">Phone Number</label>
+                <input
+                  type="tel"
+                  class="form-control"
+                  id="orderPhone"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="orderItems" class="form-label"
+                  >What would you like to order?</label
+                >
+                <textarea
+                  class="form-control"
+                  id="orderItems"
+                  rows="3"
+                  placeholder="E.g., 2x Fried Rice, 1x BBQ Pork..."
+                  required
+                ></textarea>
+              </div>
+              <div class="mb-3">
+                <label for="orderAddress" class="form-label"
+                  >Delivery Address</label
+                >
+                <textarea
+                  class="form-control"
+                  id="orderAddress"
+                  rows="2"
+                  required
+                ></textarea>
+              </div>
+              <div class="mb-3">
+                <label for="orderTime" class="form-label"
+                  >Preferred Delivery Time</label
+                >
+                <input type="time" class="form-control" id="orderTime" />
+              </div>
+              <div class="d-grid">
+                <button type="submit" class="btn btn-warning fw-bold">
+                  Submit Order
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="footer-container"></div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      document
+        .getElementById("orderNowForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+          alert("✅ Your order has been submitted successfully!");
+          const modal = bootstrap.Modal.getInstance(
+            document.getElementById("orderNowModal")
+          );
+          modal.hide();
+          this.reset();
+        });
+    </script>
+
+    <script>
+      document
+        .getElementById("bookTableForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+          alert("✅ Your table booking has been submitted!");
+          const modal = bootstrap.Modal.getInstance(
+            document.getElementById("bookTableModal")
+          );
+          modal.hide();
+          this.reset();
+        });
+    </script>
+
+    <script>
+      fetch("../footer_enmain.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("footer-container").innerHTML = data;
+        })
+        .catch((error) => console.error("Error loading footer:", error));
+    </script>
+  </body>
+</html>

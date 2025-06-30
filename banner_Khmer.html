@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Typing Banner with Khmer Food</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Angkor&family=Moul&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Bootstrap CSS + Icons -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+
+    <style>
+      body,
+      html {
+        margin: 0;
+        padding: 0;
+        font-family: "Moul", serif;
+      }
+
+      .banner {
+        position: relative;
+        width: 100%;
+        height: 350px;
+        overflow: hidden;
+        margin-top: 150px;
+      }
+
+      .slide {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+        opacity: 0;
+        transition: opacity 1s ease-in-out;
+      }
+
+      .slide.active {
+        opacity: 1;
+        z-index: 1;
+      }
+
+      .banner-text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: rgb(11, 0, 0);
+        text-align: center;
+        z-index: 2;
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+      }
+
+      #typing-text {
+        font-family: "Moul", serif;
+        font-size: 3.5rem;
+        white-space: nowrap;
+        overflow: hidden;
+        border-right: 3px solid rgb(5, 0, 0);
+        min-height: 80px;
+      }
+
+      .banner-text p {
+        font-size: 1.2rem;
+        margin-top: 10px;
+        animation: fadeIn 3s ease-in-out;
+      }
+
+      .button-group {
+        margin-top: 25px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+        animation: fadeIn 4s ease-in-out;
+      }
+
+      .btn-custom {
+        font-size: 1rem;
+        padding: 12px 20px;
+        border-radius: 30px;
+        border: none;
+      }
+
+      @keyframes fadeIn {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+
+      @media (max-width: 768px) {
+        #typing-text {
+          font-family: "Moul", serif;
+          font-size: 2rem;
+        }
+        .banner-text p {
+          font-family: "Moul", serif;
+          font-size: 1rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Banner Section -->
+    <div class="banner">
+      <!-- Slides -->
+      <div
+        class="slide active"
+        style="background-image: url('../image/banner/banner_1.jpg')"
+      ></div>
+      <div
+        class="slide"
+        style="background-image: url('../image/banner/banner_2.jpg')"
+      ></div>
+      <div
+        class="slide"
+        style="background-image: url('../image/banner/banner_3.jpg')"
+      ></div>
+
+      <!-- Banner Content -->
+      <div class="banner-text">
+        <h1 id="typing-text"></h1>
+        <p>សូមរីករាយជាមួយម្ហូបអាហារខ្មែរនៅហាងរបស់យើងខ្ញុំ</p>
+        <div class="button-group">
+          <a
+            href="#order"
+            class="btn btn-light btn-custom"
+            data-bs-toggle="modal"
+            data-bs-target="#orderNowModal"
+            ><i class="bi bi-bag-fill me-2"></i>កម្មងឥឡូវនេះ</a
+          >
+          <a
+            href="/main page-Khmer/About​ us_Kh.html"
+            class="btn btn-outline-light btn-custom"
+            ><i class="bi bi-eye me-2"></i>ស្វែងយល់បន្ថែម</a
+          >
+          <a
+            href="#location"
+            class="btn btn-outline-light btn-custom"
+            data-bs-toggle="modal"
+            data-bs-target="#mapModal"
+            ><i class="bi bi-geo-alt-fill me-2"></i>ទីតាំង</a
+          >
+          <a href="tel:+85512345678" class="btn btn-light btn-custom"
+            ><i class="bi bi-telephone-fill me-2"></i>Call Us</a
+          >
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal: កម្មង់ឥឡូវនេះ -->
+    <div
+      class="modal fade"
+      id="orderNowModal"
+      tabindex="-1"
+      aria-labelledby="orderNowModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content shadow">
+          <div class="modal-header bg-warning text-white">
+            <h5 class="modal-title fw-bold" id="orderNowModalLabel">
+              🛒 បំពេញការកម្មង់
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form id="orderNowForm">
+              <div class="mb-3">
+                <label for="orderName" class="form-label">ឈ្មោះពេញ</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="orderName"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="orderPhone" class="form-label">លេខទូរស័ព្ទ</label>
+                <input
+                  type="tel"
+                  class="form-control"
+                  id="orderPhone"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="orderItems" class="form-label"
+                  >មុខម្ហូបដែលចង់កម្មង់</label
+                >
+                <textarea
+                  class="form-control"
+                  id="orderItems"
+                  rows="3"
+                  placeholder="ឧ. បាយឆារ ២ ចាន, សាច់ជ្រូកអាំង ១..."
+                  required
+                ></textarea>
+              </div>
+              <div class="mb-3">
+                <label for="orderAddress" class="form-label"
+                  >អាសយដ្ឋានដឹកជញ្ជូន</label
+                >
+                <textarea
+                  class="form-control"
+                  id="orderAddress"
+                  rows="2"
+                  required
+                ></textarea>
+              </div>
+              <div class="mb-3">
+                <label for="orderTime" class="form-label">ម៉ោងដែលចង់បាន</label>
+                <input type="time" class="form-control" id="orderTime" />
+              </div>
+              <div class="d-grid">
+                <button type="submit" class="btn btn-warning fw-bold">
+                  ដាក់បញ្ជា
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="modal fade"
+      id="mapModal"
+      tabindex="-1"
+      aria-labelledby="mapModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content shadow">
+          <div class="modal-header bg-warning text-white">
+            <h5 class="modal-title" id="mapModalLabel">
+              🗺️ ទីតាំងរបស់យើងនៅកោះពេជ្រ
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body p-0">
+            <div class="ratio ratio-16x9">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.3841872684426!2d104.9301873153349!3d11.550899191810118!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31095125ea0ff4a7%3A0x4c7380c3453e5794!2sKoh%20Pich%20(Diamond%20Island)!5e0!3m2!1sen!2skh!4v1687935030500!5m2!1sen!2skh"
+                width="100%"
+                height="450"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+              >
+              </iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      document
+        .getElementById("orderNowForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+          alert("✅ ការកម្មង់របស់អ្នកបានដាក់ជោគជ័យ!");
+          const modal = bootstrap.Modal.getInstance(
+            document.getElementById("orderNowModal")
+          );
+          modal.hide();
+          this.reset();
+        });
+    </script>
+  </body>
+</html>
