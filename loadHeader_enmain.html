@@ -28,6 +28,8 @@
         <a
           href="#"
           class="text-decoration-none text-dark text-center auth-links"
+          data-bs-toggle="modal"
+          data-bs-target="#loginModal"
         >
           <i class="fa-solid fa-user d-block auth-links"></i
           ><small>Login</small>
@@ -35,6 +37,8 @@
         <a
           href="#"
           class="text-decoration-none text-dark text-center auth-links"
+          data-bs-toggle="modal"
+          data-bs-target="#signupModal"
         >
           <i class="fa-solid fa-book-open d-block"></i><small>Signup</small>
         </a>
@@ -61,37 +65,37 @@
             <a class="nav-link" href="/index.html">Home Page</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/main page-English/fish_type.html"
+            <a class="nav-link" href="/main-page-English/fish_type.html"
               >Fish Type</a
             >
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/main page-English/soup_type.html"
+            <a class="nav-link" href="/main-page-English/soup_type.html"
               >Soup Type</a
             >
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/main page-English/grill_type.html"
+            <a class="nav-link" href="/main-page-English/grill_type.html"
               >Grill Type</a
             >
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/main page-English/fried_type.html"
+            <a class="nav-link" href="/main-page-English/fried_type.html"
               >Fried Type</a
             >
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/main page-English/dessert_type.html"
+            <a class="nav-link" href="/main-page-English/dessert_type.html"
               >Dessert Type</a
             >
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/main page-English/Contact us.html"
+            <a class="nav-link" href="/main-page-English/Contact us.html"
               >Contact Us</a
             >
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/main page-English/About us.html"
+            <a class="nav-link" href="/main-page-English/About us.html"
               >About Us</a
             >
           </li>
@@ -119,16 +123,285 @@
               <li>
                 <a
                   class="dropdown-item"
-                  href="../main page-Khmer/Home_Page_Kh.html"
-                  >Khmer</a
+                  href="../main-page-Khmer/Home_Page_Kh.html"
+                  ><img
+                    src="https://cdn.jsdelivr.net/gh/hjnilsson/country-flags/svg/kh.svg"
+                    alt=""
+                    width="20"
+                  />Khmer</a
                 >
               </li>
             </ul>
+          </li>
+          <li class="nav-item">
+            <a
+              href="#"
+              class="btn btn-warning btn-sm"
+              data-bs-toggle="modal"
+              data-bs-target="#paymentModal"
+            >
+              <i class="fa-solid fa-credit-card"></i> Payment
+            </a>
           </li>
         </ul>
       </div>
     </div>
   </nav>
+</div>
+<!-- ✅ Add this after your closing </nav> -->
+
+<!-- Login Modal -->
+<div
+  class="modal fade"
+  id="loginModal"
+  tabindex="-1"
+  aria-labelledby="loginModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h5 class="modal-title" id="loginModalLabel">Login</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+
+      <!-- Modal Body -->
+      <div class="modal-body">
+        <form>
+          <div class="mb-3">
+            <label for="emailInput" class="form-label">Email address</label>
+            <input
+              type="email"
+              class="form-control"
+              id="emailInput"
+              placeholder="name@example.com"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="passwordInput" class="form-label">Password</label>
+            <input
+              type="password"
+              class="form-control"
+              id="passwordInput"
+              placeholder="Password"
+            />
+          </div>
+          <button type="submit" class="btn btn-primary w-100 mb-3">
+            Login
+          </button>
+        </form>
+
+        <!-- Social Icons -->
+        <div class="text-center">
+          <p>Or login with</p>
+          <a href="#" class="btn btn-outline-primary me-2">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="#" class="btn btn-outline-dark me-2">
+            <i class="fab fa-tiktok"></i>
+          </a>
+          <a href="#" class="btn btn-outline-danger me-2">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="#" class="btn btn-outline-danger">
+            <i class="fab fa-youtube"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Modal Footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+          Close
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Sign Up Modal -->
+<div
+  class="modal fade"
+  id="signupModal"
+  tabindex="-1"
+  aria-labelledby="signupModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h5 class="modal-title" id="signupModalLabel">Sign Up</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+
+      <!-- Modal Body -->
+      <div class="modal-body">
+        <form>
+          <div class="mb-3">
+            <label for="signupName" class="form-label">Full Name</label>
+            <input
+              type="text"
+              class="form-control"
+              id="signupName"
+              placeholder="Your name"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="signupEmail" class="form-label">Email address</label>
+            <input
+              type="email"
+              class="form-control"
+              id="signupEmail"
+              placeholder="name@example.com"
+            />
+          </div>
+          <div class="mb-3">
+            <label for="signupPassword" class="form-label">Password</label>
+            <input
+              type="password"
+              class="form-control"
+              id="signupPassword"
+              placeholder="Password"
+            />
+          </div>
+          <button type="submit" class="btn btn-success w-100 mb-3">
+            Sign Up
+          </button>
+        </form>
+
+        <!-- Social Icons -->
+        <div class="text-center">
+          <p>Or sign up with</p>
+          <a href="#" class="btn btn-outline-primary me-2">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="#" class="btn btn-outline-dark me-2">
+            <i class="fab fa-tiktok"></i>
+          </a>
+          <a href="#" class="btn btn-outline-danger me-2">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="#" class="btn btn-outline-danger">
+            <i class="fab fa-youtube"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Modal Footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+          Close
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Card Payment Modal -->
+<div
+  class="modal fade"
+  id="paymentModal"
+  tabindex="-1"
+  aria-labelledby="paymentModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h5 class="modal-title" id="paymentModalLabel">Payment Information</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+
+      <!-- Modal Body -->
+      <div class="modal-body">
+        <!-- Optional Card Preview -->
+        <div class="mb-4 text-center">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/0/04/Visa.svg"
+            alt="Visa"
+            width="60"
+            class="me-2"
+          />
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/0/04/Mastercard-logo.png"
+            alt="MasterCard"
+            width="50"
+          />
+        </div>
+
+        <form>
+          <div class="mb-3">
+            <label for="cardHolder" class="form-label">Cardholder Name</label>
+            <input
+              type="text"
+              class="form-control"
+              id="cardHolder"
+              placeholder="Full Name on Card"
+              required
+            />
+          </div>
+
+          <div class="mb-3">
+            <label for="cardNumber" class="form-label">Card Number</label>
+            <input
+              type="text"
+              class="form-control"
+              id="cardNumber"
+              placeholder="xxxx xxxx xxxx xxxx"
+              required
+            />
+          </div>
+
+          <div class="row">
+            <div class="col-md-6 mb-3">
+              <label for="expiryDate" class="form-label">Expiry Date</label>
+              <input
+                type="text"
+                class="form-control"
+                id="expiryDate"
+                placeholder="MM/YY"
+                required
+              />
+            </div>
+
+            <div class="col-md-6 mb-3">
+              <label for="cvv" class="form-label">CVV</label>
+              <input
+                type="text"
+                class="form-control"
+                id="cvv"
+                placeholder="123"
+                required
+              />
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-success w-100">Pay Now</button>
+        </form>
+      </div>
+
+      <!-- Modal Footer -->
+      <div class="modal-footer">
+        <small class="text-muted">Your payment is secure & encrypted.</small>
+      </div>
+    </div>
+  </div>
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
