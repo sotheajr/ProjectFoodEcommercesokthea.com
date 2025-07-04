@@ -16,8 +16,7 @@ body {
   padding-bottom: 1rem;
   align-items: center;
   border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-  overflow: hidden;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.08);
   background: #fff;
 }
 

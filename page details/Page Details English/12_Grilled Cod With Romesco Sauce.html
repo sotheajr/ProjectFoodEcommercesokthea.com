@@ -1,9 +1,208 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spicy Coconut Grilled Chicken</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="Style.css">
+    
+  </head>
+  <body>
+    <div class="sticky-wrapper">
+      <header class="expo-header">
+        <div class="logo-section">
+          <img
+            src="/image/banner/BgSub_restaurant-logo-design-(1)-template-b9bd726f6bee3380567f1c9b63a8c99b_screen.png"
+            alt="Logo"
+          />
+        </div>
+        <div class="info-row">
+          <div class="fw-bold">MONDAY - SUNDAY</div>
+          <div class="text-muted">7:00PM - 11:00AM</div>
+          <div class="text-muted">📍 Diamond Khmer Restaurant, Koh Pich</div>
+        </div>
+      </header>
+
+      <nav class="main-navbar navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            class="collapse navbar-collapse justify-content-between"
+            id="navbarNav"
+          >
+            <ul class="navbar-nav gap-2">
+              <li class="nav-item">
+                <a class="nav-link" href="../../index1.html">Home Page</a>
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="../../main-page-English/fish_type.html"
+                  >Fish Type</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="../../main-page-English/soup_type.html"
+                  >Soup Type</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="../../main-page-English/grill_type.html"
+                  >Grill Type</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="../../main-page-English/dessert_type.html"
+                  >Fried Type</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="../../main-page-English/fried_type.html"
+                  >Dessert Type</a
+                >
+              </li>
+            </ul>
+            <ul class="navbar-nav">
+              <li class="nav-item position-relative">
+                <a href="cart.html" class="nav-link">
+                  <i class="fa-solid fa-cart-shopping"></i>
+                  <span class="ms-1">Cart</span>
+                  <span
+                    id="cart-count"
+                    class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+                    >0</span
+                  >
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <!-- PRODUCT -->
+    <div class="product-page">
+      <div class="product-image">
+        <div class="name"><b>Spicy Coconut Grilled Chicken</b></div>
+        <img src="../../image/Grill type/26-Spicy Coconut Grilled Chicken.png" alt="Spicy Coconut Grilled Chicken">
+      </div>
+      <div class="product-details">
+        <h2 id="priceDisplay">$5.00</h2>
+        <label for="sizeSelect" class="form-label">Select Size</label>
+        <select
+          class="form-select mb-3"
+          id="sizeSelect"
+          onchange="updatePrice()"
+        >
+          <option value="5">Small - $5</option>
+          <option value="7">Medium - $7</option>
+          <option value="9">Large - $9</option>
+        </select>
+        <p><strong>Ingredients</strong></p>
+        <ul>
+            <p>rsley, vinegar, tomato paste, red pepper flakes, 1/2 cup olive oil, and 1 1/2 teaspoons paprika. Process until sauce is finely chopped. Taste and add more red pepper flakes, if needed; season with salt and black pepper.</li></p>1-
+            
+            <li>1-1/2 c. roasted, unsalted hazelnuts
+                1 clove garlic, smashed
+                1 1/4 c. drained roasted red peppers (about 8 oz.)</li>
+            <li>2-1 Tbsp. chopped fresh parsley, plus more for serving
+                1 Tbsp. sherry vinegar
+                1 Tbsp. tomato paste
+                1/4 tsp. (or more) crushed red pepper flakes
+                1/2 c. plus 1 tbsp. extra-virgin olive oil, divided</li>
+            <li>3-2 tsp. smoked paprika, divided
+                Kosher salt
+                Freshly ground black pepper
+                4 (8-oz.) cod fillets
+                Vegetable oil, for grill</li>
+            </ul>
+          </li>
+        </ul>
+
+        <button class="btn btn-dark" onclick="addToCart()">Add to Cart</button>
+      </div>
+    </div>
+
+    <script>
+      function updatePrice() {
+        const selected = document.getElementById("sizeSelect").value;
+        document.getElementById("priceDisplay").innerText = `$${parseFloat(
+          selected
+        ).toFixed(2)}`;
+      }
+
+      function addToCart() {
+        const price = parseFloat(document.getElementById("sizeSelect").value);
+        const product = {
+          name: "Grilled Cod With Romesco Sauce",
+          price: price,
+          image: ".../../image/Grill type/26-Spicy Coconut Grilled Chicken.png",
+          qty: 1,
+        };
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+        let found = false;
+        cart = cart.map((item) => {
+          if (item.name === product.name && item.price === product.price) {
+            item.qty += 1;
+            found = true;
+          }
+          return item;
+        });
+        if (!found) cart.push(product);
+        localStorage.setItem("cart", JSON.stringify(cart));
+        updateCartCount();
+        alert("Added to cart!");
+      }
+
+      function updateCartCount() {
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+        let count = cart.reduce((sum, item) => sum + item.qty, 0);
+        document.getElementById("cart-count").innerText = count;
+      }
+
+      document.addEventListener("DOMContentLoaded", updateCartCount);
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Grilled Cod With Romesco Sauce</title>
+        <title></title>
         <link rel="stylesheet" href="Style.css">
     </head>
     <body>
@@ -34,23 +233,10 @@
                 
                 <h1>Ingredients</h1>
                 <ul>
-                    <li>1-1/2 c. roasted, unsalted hazelnuts
-                        1 clove garlic, smashed
-                        1 1/4 c. drained roasted red peppers (about 8 oz.)</li>
-                    <li>2-1 Tbsp. chopped fresh parsley, plus more for serving
-                        1 Tbsp. sherry vinegar
-                        1 Tbsp. tomato paste
-                        1/4 tsp. (or more) crushed red pepper flakes
-                        1/2 c. plus 1 tbsp. extra-virgin olive oil, divided</li>
-                    <li>3-2 tsp. smoked paprika, divided
-                        Kosher salt
-                        Freshly ground black pepper
-                        4 (8-oz.) cod fillets
-                        Vegetable oil, for grill</li>
+                    
                     <br/>
                     <h1>Directions</h1>
-                    <li>Step 1-
-                        In a blender or food processor, pulse hazelnuts and garlic until coarsely chopped. Add roasted peppers, parsley, vinegar, tomato paste, red pepper flakes, 1/2 cup olive oil, and 1 1/2 teaspoons paprika. Process until sauce is finely chopped. Taste and add more red pepper flakes, if needed; season with salt and black pepper.</li>
+                    <li>Step
                     <li>Step 2-
                             In a small bowl, combine remaining 1 tablespoon olive oil and 1/2 teaspoon paprika. Brush paprika oil all over cod; generously season with salt and black pepper.</li>
                     <li>Step 3-
