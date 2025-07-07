@@ -106,6 +106,9 @@
       }
 
       @media (max-width: 768px) {
+        body {
+    padding-top: 110px !important; 
+  }
         .expo-header,
         .right-header,
         .logo-section,
@@ -122,6 +125,28 @@
           justify-content: center;
           width: 100%;
         }
+    .main-navbar {
+    padding: 0.1rem 0;
+  }
+  .navbar-nav .nav-link {
+    font-size: 0.85rem;
+    padding: 0.4rem 0.7rem;
+  }
+  .navbar-toggler {
+    font-size: 1rem;
+    padding: 0.2rem 0.6rem;
+  }
+  .navbar-toggler-icon {
+    width: 1.5em;
+    height: 1.5em;
+  }
+  .dropdown-toggle {
+    font-size: 0.85rem;
+    padding: 0.4rem 0.7rem;
+  }
+  .sticky-wrapper {
+    top: 0;
+  }
       }
     </style>
   </head>
@@ -367,7 +392,7 @@
     // Example dummy check (replace with real AJAX / API)
     if (email === 'admin@example.com' && password === 'admin') {
       // ✅ Redirect to dashboard in root folder
-      window.location.href = './dashboard.html'; 
+      window.location.href = 'dashboard.html'; 
     } else {
       alert('Invalid credentials!');
     }
