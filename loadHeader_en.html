@@ -285,14 +285,18 @@
                   </li>
                 </ul>
               </li>
-              
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/dashboard.html">
+                  <i class="fa-solid fa-gauge-high me-1"></i> Dashboard
+                </a>
               </li>
             </ul>
           </div>
         </div>
       </nav>
     </div>
-
+    
     <!-- ✅ Login Modal -->
 <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
   <div class="modal-dialog">
@@ -380,31 +384,8 @@
     </div>
   </div>
 </div>
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-
-<script>
-  // Handle login submit
-  document.getElementById('loginForm').addEventListener('submit', function(e) {
-    e.preventDefault();
-    const email = document.getElementById('emailInput').value.trim();
-    const password = document.getElementById('passwordInput').value.trim();
-
-    // Example dummy check (replace with real AJAX / API)
-    if (email === 'admin@example.com' && password === 'admin') {
-      // ✅ Redirect to dashboard in root folder
-      window.location.href = 'dashboard.html'; 
-    } else {
-      alert('Invalid credentials!');
-    }
-  });
-
-  // Handle signup submit (optional)
-  document.getElementById('signupForm').addEventListener('submit', function(e) {
-    e.preventDefault();
-    alert('Sign up submitted! (Add your logic here)');
-  });
-</script>
-
 
 
   </body>
